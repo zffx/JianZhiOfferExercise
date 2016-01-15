@@ -33,6 +33,8 @@ Makefile*
 *.qmlproject.user
 *.qmlproject.user.*
 
+build-JianZhiOfferExercise-Desktop_Qt_5_3_MinGW_32bit_qt_53_w-Debug/
+.gitignore.bak
 # =========================
 # Operating System Files
 # =========================
