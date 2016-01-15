@@ -6,8 +6,12 @@ ListNode::ListNode(): mValue (0), mNext (nullptr)
 {
 }
 
-ListNode::ListNode(int value) : mValue (value), mNext (nullptr)
+ListNode* ListNode::createListNode(int value)
 {
+    ListNode *node = new ListNode();
+    node->mValue = value;
+    node->mNext = nullptr;
+    return node;
 }
 
 List::List() : mHead(nullptr)
@@ -41,17 +45,19 @@ void List::appendNode(ListNode *node)
     node->mNext = nullptr;
 }
 
-void List::printList(ListNode *head)
+void List::printList(std::ostream &out)
 {
     if(!mHead)
     {
         return;
     }
     ListNode *index = mHead;
-    std::cout << "printList: " << std::endl;
+
+    out << "printList: " << std::endl;
     while (index->mNext != nullptr)
     {
-        std::cout << index->mNext->mValue << " \t" << std::endl;
+        out << index->mNext->mValue << " \t";
         index = index->mNext;
     }
+  out << std::endl;
 }
