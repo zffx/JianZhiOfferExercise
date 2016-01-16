@@ -5,7 +5,7 @@
 
 namespace Q5{
 
-void printReverseList(ListNode *head)
+void printReverseListByStack(ListNode *head)
 {
     if(!head)
     {
@@ -14,13 +14,13 @@ void printReverseList(ListNode *head)
 
     std::stack<ListNode*> nodeStack;
     ListNode* index = head;
-    while (index->mNext != nullptr)
+    while (index!= nullptr)
     {
-        nodeStack.push(index->mNext);
+        nodeStack.push(index);
         index = index->mNext;
     }
 
-    std::cout << "Print List in reversed order: " << std::endl;
+    std::cout << "Print List in reversed order by using stack: " << std::endl;
     while (!nodeStack.empty())
     {
         std::cout << nodeStack.top()->mValue << "\t" ;
@@ -28,18 +28,31 @@ void printReverseList(ListNode *head)
     }
     std::cout << std::endl;
 }
+  
+  void printReverseListByRecursion(ListNode *head)
+  {
+    if(!head)
+      return;
+    if(head->mNext != nullptr)
+    {
+      printReverseListByRecursion(head->mNext);
+    }
+    std::cout << head->mValue << "\t";
+  }
 
 void testQ5()
 {
     List list;
     for(int i = 0; i < 6; ++i)
     {
-        ListNode* node = ListNode::createListNode(i);
-        list.appendNode(node);
+        list.appendNode(i);
     }
     list.printList(std::cout);
-    //std::cout<<out;
-    printReverseList(list.mHead);
+
+    printReverseListByStack(list.mHead);
+    std::cout << "Print List in reversed order by using recursion: " << std::endl;
+    printReverseListByRecursion(list.mHead);
+    std::cout<<std::endl;
 }
 
 } //namespace Q5

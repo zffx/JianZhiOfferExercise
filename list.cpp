@@ -27,36 +27,31 @@ List::List(ListNode* head) : mHead(head)
     mHead->mNext = nullptr;
 }
 
-void List::appendNode(ListNode *node)
+void List::appendNode(int value)
 {
-    if(!mHead)
-    {
-        mHead = node;
-        node->mNext = nullptr;
-        return;
-    }
-
-    ListNode *index = mHead;
-    while (index->mNext != nullptr)
-    {
-        index = index->mNext;
-    }
-    index->mNext = node;
-    node->mNext = nullptr;
+  ListNode *node = ListNode::createListNode(value);
+  
+  if (!mHead) {
+    mHead = node;
+    return;
+  }
+  
+  ListNode *index = mHead;
+  while (index->mNext != nullptr)
+  {
+    index = index->mNext;
+  }
+  index->mNext = node;
 }
 
 void List::printList(std::ostream &out)
 {
-    if(!mHead)
-    {
-        return;
-    }
     ListNode *index = mHead;
 
     out << "printList: " << std::endl;
-    while (index->mNext != nullptr)
+    while (index!= nullptr)
     {
-        out << index->mNext->mValue << " \t";
+        out << index->mValue << " \t";
         index = index->mNext;
     }
   out << std::endl;
