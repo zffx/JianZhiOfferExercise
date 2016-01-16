@@ -19,9 +19,8 @@ class List
 public:
     List();
     List(ListNode *head);
-    void appendNode(ListNode *node);
+    void appendNode(int value);
     void printList(std::ostream &out);
-    //static unsigned int length(ListNode *head);
 public:
     ListNode* mHead;
 };
