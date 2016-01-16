@@ -17,6 +17,9 @@ int main(int argc, char** argv) {
     case 1:
         Q5::testQ5();
         break;
+    case 2:
+        testQ6();
+        break;
     default:
         break;
     }

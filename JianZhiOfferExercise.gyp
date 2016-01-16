@@ -5,12 +5,15 @@
                 'target_name': 'JianZhiOfferExercise',  
                 'type'       : 'executable',  
                 'sources'    :    
-                [  
-                    'list.cpp',  
+                [
+                    'Declarations.h',
+                    'List.h',
+                    'List.cpp',
                     'main.cpp',  
-                    'printReverseList.cpp',
-                    'list.h',
-                    'declarations.h',
+                    'PrintReverseList.cpp',
+                    'BinaryTree.h',
+                    'BinaryTree.cpp',
+                    'ConstructBinaryTree.cpp',  
                 ],  
                 'include_dirs':  
                 [  

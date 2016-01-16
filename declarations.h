@@ -8,4 +8,5 @@ void printReverseList(ListNode *head);
 void testQ5();
 }
 
+void testQ6();
 #endif // DECLARATIONS_H
