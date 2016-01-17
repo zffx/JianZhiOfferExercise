@@ -7,7 +7,8 @@ using namespace std;
 int main(int argc, char** argv) {
 
     cout << "Input the number to run:" <<endl
-         << "1. Print Reversed List." << endl;
+         << "1. Print Reversed List." << endl
+         << "2. Construct BinaryTree." << endl;
 
     unsigned int choice = 0;
     cin >> choice;
@@ -18,7 +19,7 @@ int main(int argc, char** argv) {
         Q5::testQ5();
         break;
     case 2:
-        testQ6();
+        Q6::testQ6();
         break;
     default:
         break;
