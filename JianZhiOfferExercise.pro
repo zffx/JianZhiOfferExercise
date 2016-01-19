@@ -4,13 +4,16 @@ CONFIG -= qt
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    list.cpp \
-    printReverseList.cpp
+    List.cpp \
+    PrintReverseList.cpp \
+    BinaryTree.cpp \
+    ConstructBinaryTree.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    list.h \
-    declarations.h
+    List.h \
+    Declarations.h
+    BinaryTree.h
 
